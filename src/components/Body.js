@@ -4,35 +4,24 @@ import ResCard from "./ResCard";
 import Shimmer from "./Shimmer";
 import NoRes from "./NoRes";
 import useResData from "../../utils/useResData";
+import { searchHandler, topRatedHandler } from '../../utils/helper'
 
 
 const Body = () => {
 
     const [name, setName] = useState("")
 
-    const data = useResData()
-
-    const [dataF, setDataF] = useState(data)
-
-    function searchHandler() {
-        const filtredData = data.filter(resData => resData?.data?.name.toLowerCase().includes(name.toLowerCase()))
-        setDataF(filtredData)
-    }
-
-    function topRatedHandler() {
-        const filtredData = data.filter(resData => resData?.data?.avgRating >= 4).sort((a, b) => b?.data?.avgRating - a?.data?.avgRating)
-        setDataF(filtredData)
-    }
+    const [data, dataF, setDataF] = useResData()
 
     return (
         <div className="main-res-con">
             <div className="search-bar">
                 <div className="search-box">
                     <input type="text" placeholder="Resturant Name" defaultValue={name} onChange={(e) => setName(e.target.value)}></input>
-                    <button onClick={searchHandler}>search</button>
+                    <button onClick={() => searchHandler(data,name,setDataF)}>search</button>
                 </div>
                 <div className="topRated-box">
-                    <button onClick={topRatedHandler}>Top Rated</button>
+                    <button onClick={() => topRatedHandler(data,setDataF)}>Top Rated</button>
                 </div>
             </div>
             <div className="res-con">

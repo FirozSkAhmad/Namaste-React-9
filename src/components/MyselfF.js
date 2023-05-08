@@ -12,7 +12,7 @@ const MyselfF = () => {
 
     if(!isOnline){
         return(
-            <h2>Check your internet connection</h2>
+            <h2>🔻Check your internet connection</h2>
         )
     }
 

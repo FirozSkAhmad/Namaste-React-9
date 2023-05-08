@@ -16,9 +16,6 @@
   width: 100%;
 }
 
-.nav-con {
-  margin-right: 10px;
-}
 
 .nav-con > ul {
   display: flex;
@@ -29,6 +26,10 @@
 .nav-con > ul > li {
   font-size: larger;
   font-weight: bold;
+}
+
+.isonline-con{
+  margin-right: 10px;
 }
 
 .search-bar {

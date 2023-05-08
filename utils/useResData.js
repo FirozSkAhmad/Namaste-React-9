@@ -3,7 +3,9 @@ import { RES_DATA } from './constants'
 
 
 const useResData = () => {
-    const [resData, setResData] = useState([])
+    
+    const [data, setData] = useState([])
+    const [dataF, setResDataF] = useState([])
 
     useEffect(() => {
         getData()
@@ -12,10 +14,11 @@ const useResData = () => {
     async function getData() {
         const data = await fetch(RES_DATA)
         const json = await data.json()
-        setResData(json?.data?.cards[2]?.data?.data?.cards)
+        setData(json?.data?.cards[2]?.data?.data?.cards)
+        setResDataF(json?.data?.cards[2]?.data?.data?.cards)
     }
 
-    return resData
+    return [data, dataF, setResDataF]
 }
 
 export default useResData
