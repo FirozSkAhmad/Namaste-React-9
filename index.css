@@ -1,0 +1,104 @@
+.header-con {
+  width: 100%;
+  height: 120px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-con > .img-con {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.img-con > img {
+  width: 100%;
+}
+
+.nav-con {
+  margin-right: 10px;
+}
+
+.nav-con > ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.nav-con > ul > li {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar > input {
+  padding: 3px;
+}
+
+.res-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shimmer-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shimmer-box {
+  width: 220px;
+  height: 300px;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.noRes-con {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.res-card {
+  width: 200px;
+  padding: 10px;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.res-card > img {
+  width: 100%;
+}
+
+.errPage-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainResMenu-con {
+  display: flex;
+  gap: 30px;
+}
+
+.resMenu-con {
+  width: 1000px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diff-con {
+  display: flex;
+  justify-content: space-between;
+}
